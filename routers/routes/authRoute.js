@@ -8,7 +8,7 @@ const {
 const authRouter = express.Router();
 
 authRouter.post("/register", signup);
-authRouter.get('/login', login);
+authRouter.post('/login', login);
 
 
 
