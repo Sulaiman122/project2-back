@@ -4,7 +4,7 @@ const cors = require("cors");
 const db = require("./db/db.js");
 
 const authRoute = require("./routers/routes/authRoute");
-const todoRouter = require("./routers/routes/todoRoute");
+const scoreRouter = require("./routers/routes/scoreRoute");
 
 const app = express()
 app.use(cors());
@@ -13,7 +13,7 @@ app.use(express.json());
 
 
 app.use("/", authRoute);
-app.use("/", todoRouter);
+app.use("/", scoreRouter);
 
 
 const PORT = process.env.PORT || 4500
