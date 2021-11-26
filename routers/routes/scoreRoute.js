@@ -1,12 +1,13 @@
 const express = require("express");
 const {
-    setScore,
+    setScore,change,
 } = require("../controllers/scoreController");
 
 
 const scoreRouter = express.Router();
 
 scoreRouter.post("/setscore", setScore);
+scoreRouter.post("/change", change);
 
 
 
