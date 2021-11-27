@@ -35,14 +35,14 @@ const login = async(req, res) =>{
     if (!user) {
       return res.status(200).json({
         error: true,
-        message: "Incorrect Email or Password 1",
+        message: "Incorrect Email or Password",
       });
     }else if(user.email==req.body.email&&user.password==req.body.password){
       return res.status(200).json(user);
     }
     return res.status(200).json({
       error: true,
-      message: "Incorrect Email or Password 2",
+      message: "Incorrect Email or Password",
     });
   } catch (error) {
     console.error(error);
